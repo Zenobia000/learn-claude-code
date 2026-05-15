@@ -187,6 +187,45 @@ First we fill the workshops. Then the farms, the hospitals, the factories. Then 
 
 ---
 
+## Fastest Learning Path
+
+Not sure where to start? Here is a 3-phase guide to get productive fast.
+
+### Phase 1: Core (s01-s03) — ~1-2 hours
+
+| Order | File | What You Learn |
+|-------|------|----------------|
+| 1 | `agents/s01_agent_loop.py` | **Minimal agent loop** — one loop + Bash tool = an agent |
+| 2 | `agents/s02_tool_use.py` | **Tool expansion** — the loop stays the same; new tools just register into the dispatch map |
+| 3 | `agents/s03_todo_write.py` | **Planning ability** — list the steps first, then execute; completion rate doubles |
+
+After these three files you understand the skeleton of Claude Code: **the model decides, the harness executes.**
+
+### Phase 2: Advanced Mechanisms (s04-s07) — ~2-3 hours
+
+| Order | File | What You Learn |
+|-------|------|----------------|
+| 4 | `agents/s04_subagent.py` | **Subagents** — break big tasks down; each subtask gets a clean context |
+| 5 | `agents/s05_skill_loading.py` | **On-demand knowledge** — inject via tool_result, not the system prompt |
+| 6 | `agents/s06_context_compact.py` | **Context compression** — three-layer strategy to handle context overflow |
+| 7 | `agents/s07_task_system.py` | **Task system** — file-based task graph with dependencies |
+
+### Phase 3: Multi-Agent Collaboration (s08-s12) — ~2-3 hours
+
+| Order | File | What You Learn |
+|-------|------|----------------|
+| 8 | `agents/s08_background_tasks.py` | Background execution, the agent keeps thinking |
+| 9 | `agents/s09_agent_teams.py` | Multi-agent teams + async mailboxes |
+| 10 | `agents/s10_team_protocols.py` | Team communication protocols |
+| 11 | `agents/s11_autonomous_agents.py` | Autonomous task claiming |
+| 12 | `agents/s12_worktree_task_isolation.py` | Worktree isolation for parallel execution |
+
+### Minimum Viable Path
+
+If you are extremely short on time, read only **s01 → s04 → s07** (loop → subagent → task system) to grasp 80% of Claude Code's design essence. Then look at `agents/s_full.py` for the fully integrated version.
+
+---
+
 ## The Core Pattern
 
 ```python

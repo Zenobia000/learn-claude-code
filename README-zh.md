@@ -188,6 +188,45 @@ Claude Code = 一个 agent loop
 
 ---
 
+## 最快学习路径
+
+不知道从哪里开始？以下是 3 阶段快速上手指南。
+
+### 第一阶段：核心 (s01-s03) — 约 1-2 小时
+
+| 顺序 | 文件 | 学什么 |
+|------|------|--------|
+| 1 | `agents/s01_agent_loop.py` | **最小 agent loop** — 一个循环 + Bash 工具就是一个 agent |
+| 2 | `agents/s02_tool_use.py` | **工具扩展** — loop 不变，新工具只需加进 dispatch map |
+| 3 | `agents/s03_todo_write.py` | **计划能力** — 先列步骤再执行，完成率翻倍 |
+
+这三个文件掌握后，你就理解了 Claude Code 的骨架：**模型决策、harness 执行。**
+
+### 第二阶段：进阶机制 (s04-s07) — 约 2-3 小时
+
+| 顺序 | 文件 | 学什么 |
+|------|------|--------|
+| 4 | `agents/s04_subagent.py` | **子代理** — 大任务拆解，每个子任务用独立 context |
+| 5 | `agents/s05_skill_loading.py` | **按需加载知识** — 通过 tool_result 注入，不塞爆 system prompt |
+| 6 | `agents/s06_context_compact.py` | **上下文压缩** — 三层压缩策略解决 context 溢出问题 |
+| 7 | `agents/s07_task_system.py` | **任务系统** — 文件式 task graph + 依赖关系 |
+
+### 第三阶段：多代理协作 (s08-s12) — 约 2-3 小时
+
+| 顺序 | 文件 | 学什么 |
+|------|------|--------|
+| 8 | `agents/s08_background_tasks.py` | 后台执行，agent 不阻塞 |
+| 9 | `agents/s09_agent_teams.py` | 多代理团队 + 异步信箱 |
+| 10 | `agents/s10_team_protocols.py` | 团队通信协议 |
+| 11 | `agents/s11_autonomous_agents.py` | 自主认领任务 |
+| 12 | `agents/s12_worktree_task_isolation.py` | worktree 隔离，并行执行互不干扰 |
+
+### 最小可行路径
+
+如果时间极度有限，只读 **s01 → s04 → s07**（loop → 子代理 → 任务系统），即可掌握 Claude Code 80% 的设计精髓。然后看 `agents/s_full.py` 了解完整集成版。
+
+---
+
 ## 核心模式
 
 ```python
