@@ -229,3 +229,6 @@ analysis_progress.md
 # course slide build artifacts (generated images + superseded deck)
 course/slides/generated/
 course/slides/harness-course-slides.pptx
+
+# MS Office temp lock files
+~$*

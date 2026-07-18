@@ -1,0 +1,16 @@
+# Normalize line endings: all text files stored as LF in the repository.
+# Working tree checkout follows platform default unless overridden below.
+* text=auto
+
+# Shell scripts must stay LF even on Windows checkouts
+*.sh text eol=lf
+
+# Binary formats -- never touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.pptx binary
+*.zip binary
