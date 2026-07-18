@@ -225,3 +225,7 @@ test_providers.py
 # Internal analysis artifacts (not learning material)
 analysis/
 analysis_progress.md
+
+# course slide build artifacts (generated images + superseded deck)
+course/slides/generated/
+course/slides/harness-course-slides.pptx
